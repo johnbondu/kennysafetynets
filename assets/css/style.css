@@ -2797,7 +2797,28 @@ SCROLLBAR
 
 }
 
+body.menu-open #backToTop,
+body.menu-open #spBackToTop{
 
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+@media (max-width: 768px) {
+
+    body.menu-open .back-to-top,
+    body.menu-open .sp-back-to-top {
+
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+
+    }
+
+}
 
 .mobile-dropdown-btn .arrow {
 
@@ -2817,11 +2838,21 @@ SCROLLBAR
 
     padding-left: 18px;
 
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
 }
 
 .mobile-dropdown.active .mobile-submenu {
 
     max-height: 900px;
+
+    opacity: 1;
 
 }
 

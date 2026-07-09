@@ -54,23 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ==========================================*/
     function openMenu() {
 
-        mobileMenu.classList.add("active");
+    mobileMenu.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("menu-open");
+    document.body.style.overflow = "hidden";
 
-        overlay.classList.add("active");
+    document.querySelectorAll(".mobile-dropdown").forEach(dropdown => {
+        dropdown.classList.remove("active");
+    });
 
-        document.body.classList.add("menu-open");
+}
 
-    }
 
-    function closeMenu() {
 
-        mobileMenu.classList.remove("active");
+   function closeMenu() {
 
-        overlay.classList.remove("active");
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    document.body.style.overflow = "";
 
-        document.body.classList.remove("menu-open");
+    document.querySelectorAll(".mobile-dropdown").forEach(dropdown => {
+        dropdown.classList.remove("active");
+    });
 
-    }
+}
     if (menuBtn) {
 
         menuBtn.addEventListener("click", openMenu);
@@ -353,6 +361,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = dropdown.querySelector(".mobile-dropdown-btn");
 
         btn.onclick = () => {
+
+            dropdowns.forEach((item) => {
+
+                if (item !== dropdown) {
+
+                    item.classList.remove("active");
+
+                }
+
+            });
 
             dropdown.classList.toggle("active");
 
