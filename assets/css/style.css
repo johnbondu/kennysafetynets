@@ -3437,10 +3437,10 @@ EXTRA MOBILE FIXES
 /*=========================
 SERVICE CARD
 =========================*/
-.service-card {
-    opacity: 0;
-    transform: translateY(70px);
-    transition: all .7s ease;
+.service-card{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .7s ease;
 }
 
 .service-card.show {
