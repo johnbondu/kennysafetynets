@@ -8329,13 +8329,17 @@ TABLET
 
     }
 
-    .sp-overlay {
+    .sp-overlay{
 
-        background: linear-gradient(180deg,
-                rgba(7, 18, 33, .92),
-                rgba(7, 18, 33, .60));
+    background: linear-gradient(
+        180deg,
+        rgba(7,18,33,.55),
+        rgba(7,18,33,.25)
+    );
 
-    }
+}
+
+
 
     .sp-content {
 
@@ -8411,11 +8415,20 @@ TABLET
 
 @media(max-width:768px) {
 
-    .sp-hero {
+    .sp-hero{
 
-        margin-top: 20px;
+    background:
+        radial-gradient(circle at top right,
+            rgba(255,140,0,.10),
+            transparent 35%),
+        linear-gradient(
+            180deg,
+            #25384d,
+            #1b2d42,
+            #132334
+        );
 
-    }
+}
 
     .sp-content {
 
