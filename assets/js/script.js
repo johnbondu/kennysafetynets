@@ -54,31 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ==========================================*/
     function openMenu() {
 
-    mobileMenu.classList.add("active");
-    overlay.classList.add("active");
-    document.body.classList.add("menu-open");
-    document.body.style.overflow = "hidden";
+        mobileMenu.classList.add("active");
+        overlay.classList.add("active");
+        document.body.classList.add("menu-open");
+        document.body.style.overflow = "hidden";
 
-    document.querySelectorAll(".mobile-dropdown").forEach(dropdown => {
-        dropdown.classList.remove("active");
-    });
+        document.querySelectorAll(".mobile-dropdown").forEach(dropdown => {
+            dropdown.classList.remove("active");
+        });
 
-}
+    }
 
 
 
-   function closeMenu() {
+    function closeMenu() {
 
-    mobileMenu.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("menu-open");
-    document.body.style.overflow = "";
+        mobileMenu.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        document.body.style.overflow = "";
 
-    document.querySelectorAll(".mobile-dropdown").forEach(dropdown => {
-        dropdown.classList.remove("active");
-    });
+        document.querySelectorAll(".mobile-dropdown").forEach(dropdown => {
+            dropdown.classList.remove("active");
+        });
 
-}
+    }
     if (menuBtn) {
 
         menuBtn.addEventListener("click", openMenu);
@@ -141,7 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (entry.isIntersecting) {
 
+
                 entry.target.classList.add("active");
+                entry.target.classList.add("show");
 
             }
 
@@ -149,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, {
 
-        threshold: 0.15
+        threshold: 0.05
 
     });
 
@@ -353,16 +355,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     );
     /* Mobile Dropdown */
-
     const dropdowns = document.querySelectorAll(".mobile-dropdown");
 
     dropdowns.forEach((dropdown) => {
 
         const btn = dropdown.querySelector(".mobile-dropdown-btn");
 
-        btn.onclick = () => {
+        if (!btn) return;
 
-            dropdowns.forEach((item) => {
+        btn.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            dropdowns.forEach(item => {
 
                 if (item !== dropdown) {
 
@@ -374,187 +380,101 @@ document.addEventListener("DOMContentLoaded", () => {
 
             dropdown.classList.toggle("active");
 
-        };
+        });
 
     });
-
     /*==========================================
         SERVICES SCROLL ANIMATION
 ==========================================*/
 
     const serviceCards = document.querySelectorAll(".service-card");
 
-    const serviceObserver = new IntersectionObserver((entries) => {
+    if (serviceCards.length) {
 
-        entries.forEach((entry) => {
+        const serviceObserver = new IntersectionObserver((entries, observer) => {
 
-            if (entry.isIntersecting) {
+            entries.forEach(entry => {
 
-                const index = [...serviceCards].indexOf(entry.target);
-
-                setTimeout(() => {
+                if (entry.isIntersecting) {
 
                     entry.target.classList.add("show");
 
-                }, index * 120);
+                    observer.unobserve(entry.target);
 
-            }
+                }
+
+            });
+
+        }, {
+
+            threshold: 0.1
 
         });
 
-    }, {
+        serviceCards.forEach(card => {
 
-        threshold: 0.05
+            serviceObserver.observe(card);
 
-    });
+        });
 
-    serviceCards.forEach(card => {
+    }
 
-        serviceObserver.observe(card);
-
-    });
-
-    /*==========================================
-        PREMIUM MEGA MENU
-==========================================*/
-
-    /*==========================================
-        PREMIUM MEGA MENU
-==========================================*/
 
     const categories = document.querySelectorAll(".category-item");
-
     const groups = document.querySelectorAll(".service-group");
 
     const previewImage = document.getElementById("megaPreviewImage");
-
     const previewTitle = document.getElementById("megaTitle");
-
     const previewDescription = document.getElementById("megaDescription");
 
-    const menuData = {
+    if (
+        categories.length &&
+        previewImage &&
+        previewTitle &&
+        previewDescription
+    ) {
 
-        "home-safety": {
+        categories.forEach(item => {
 
-            image: "assets/images/services/balcony-safety-nets1.jpg",
+            item.addEventListener("mouseenter", () => {
 
-            title: "Home Safety Nets",
+                categories.forEach(i => i.classList.remove("active"));
 
-            description: "Premium balcony safety nets, child safety, pet safety and mosquito mesh installation for complete home protection."
+                item.classList.add("active");
 
-        },
+                const target = item.dataset.target;
 
-        "bird": {
+                groups.forEach(group => group.classList.remove("active"));
 
-            image: "assets/images/services/bird-net.jpg",
+                const activeGroup = document.getElementById(target);
 
-            title: "Bird Protection",
+                if (activeGroup) {
 
-            description: "Keep pigeons and birds away with premium bird protection systems."
+                    activeGroup.classList.add("active");
 
-        },
+                }
 
-        "industrial": {
+                previewImage.style.opacity = "0";
 
-            image: "assets/images/services/cricketnest.png",
+                setTimeout(() => {
 
-            title: "Industrial Safety Nets",
+                    previewImage.src = menuData[target].image;
+                    previewTitle.textContent = menuData[target].title;
+                    previewDescription.textContent = menuData[target].description;
 
-            description: "Construction, warehouse and industrial safety net solutions."
+                    previewImage.onload = () => {
 
-        },
+                        previewImage.style.opacity = "1";
 
-        "grills": {
+                    };
 
-            image: "assets/images/services/invisible-grill.jpg",
+                }, 150);
 
-            title: "Invisible Grills",
-
-            description: "Elegant stainless steel invisible grills for modern homes."
-
-        },
-        "special": {
-
-            image: "assets/images/services/pet-safety.jpg",
-
-            title: "Special Safety Solutions",
-
-            description: "Swimming pool safety nets, staircase nets, terrace nets, monkey safety nets, coconut tree nets, garden safety nets and customized safety solutions."
-
-        }
-
-    };
-
-    categories.forEach(item => {
-
-        item.addEventListener("mouseenter", () => {
-
-            categories.forEach(i => i.classList.remove("active"));
-
-            item.classList.add("active");
-
-            const target = item.dataset.target;
-
-            groups.forEach(group => group.classList.remove("active"));
-
-            document.getElementById(target).classList.add("active");
-
-            previewImage.style.opacity = "0";
-
-            setTimeout(() => {
-
-                previewImage.src = menuData[target].image;
-
-                previewTitle.textContent = menuData[target].title;
-
-                previewDescription.textContent = menuData[target].description;
-
-                previewImage.onload = () => {
-
-                    previewImage.style.opacity = "1";
-
-                };
-
-            }, 150);
-
-            previewTitle.textContent = menuData[target].title;
-
-            previewDescription.textContent = menuData[target].description;
+            });
 
         });
 
-    });
-    const whyCards = document.querySelectorAll(".why-card");
-
-    const whyObserver = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                whyCards.forEach((card, index) => {
-
-                    setTimeout(() => {
-
-                        card.classList.add("show");
-
-                    }, index * 120);
-
-                });
-
-            }
-
-        });
-
-    }, {
-        threshold: 0.2
-    });
-
-    whyCards.forEach(card => {
-
-        whyObserver.observe(card);
-
-    });
+    }
     /*==========================================
         PROCESS ANIMATION
 ==========================================*/
@@ -625,51 +545,51 @@ document.addEventListener("DOMContentLoaded", () => {
         galleryObserver.observe(card);
 
     });
-   /*==========================================
-        LIGHTBOX
-==========================================*/
+    /*==========================================
+         LIGHTBOX
+ ==========================================*/
 
-const lightbox = document.querySelector(".gallery-lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const closeLightbox = document.querySelector(".close-lightbox");
+    const lightbox = document.querySelector(".gallery-lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeLightbox = document.querySelector(".close-lightbox");
 
-if (lightbox && lightboxImage && closeLightbox && galleryCards.length > 0) {
+    if (lightbox && lightboxImage && closeLightbox && galleryCards.length > 0) {
 
-    galleryCards.forEach(card => {
+        galleryCards.forEach(card => {
 
-        card.addEventListener("click", () => {
+            card.addEventListener("click", () => {
 
-            const img = card.querySelector("img");
+                const img = card.querySelector("img");
 
-            if (img) {
-                lightboxImage.src = img.src;
-                lightbox.classList.add("active");
-                document.body.style.overflow = "hidden";
-            }
+                if (img) {
+                    lightboxImage.src = img.src;
+                    lightbox.classList.add("active");
+                    document.body.style.overflow = "hidden";
+                }
+
+            });
 
         });
 
-    });
-
-    closeLightbox.addEventListener("click", () => {
-
-        lightbox.classList.remove("active");
-        document.body.style.overflow = "auto";
-
-    });
-
-    lightbox.addEventListener("click", (e) => {
-
-        if (e.target === lightbox) {
+        closeLightbox.addEventListener("click", () => {
 
             lightbox.classList.remove("active");
             document.body.style.overflow = "auto";
 
-        }
+        });
 
-    });
+        lightbox.addEventListener("click", (e) => {
 
-}
+            if (e.target === lightbox) {
+
+                lightbox.classList.remove("active");
+                document.body.style.overflow = "auto";
+
+            }
+
+        });
+
+    }
     /*==========================================
         REVIEW ANIMATION
 ==========================================*/

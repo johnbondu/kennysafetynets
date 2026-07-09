@@ -3847,17 +3847,26 @@ MOBILE
 
 @media(max-width:768px) {
 
-    .services {
-
-        padding: 90px 0;
-
+     .services{
+        display:block !important;
     }
 
-    .services-grid {
-
-        grid-template-columns: 1fr;
-
+    .services-grid{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        visibility:visible !important;
+        opacity:1 !important;
     }
+
+    .service-card{
+        display:flex !important;
+        visibility:visible !important;
+        opacity:1 !important;
+        transform:none !important;
+        height:auto !important;
+        min-height:auto !important;
+    }
+
 
     .section-title {
 
