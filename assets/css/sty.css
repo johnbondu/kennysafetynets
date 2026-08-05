@@ -1,4 +1,4 @@
-/*==================================================
+/* /*==================================================
             SAFENEST V2 - STYLE.CSS
             PART 1 - GLOBAL DESIGN SYSTEM
 ==================================================*/
@@ -1094,35 +1094,19 @@ BACKGROUND BLOBS
 LAYOUT
 ==========================*/
 
-.hero-wrapper{
+.hero-wrapper {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns: 1.1fr .9fr;
 
-    align-items:center;
+    gap: 80px;
 
-    gap:80px;
+    align-items: center;
 
-    position:relative;
+    position: relative;
 
-    z-index:2;
-
-}
-
-.hero-content{
-
-    grid-column:1;
-
-    grid-row:1;
-
-}
-
-.hero-image{
-
-    grid-column:2;
-
-    grid-row:1;
+    z-index: 2;
 
 }
 
@@ -1524,59 +1508,6 @@ LAPTOP
     }
 
 }
-.warranty-card{
-
-    top:30px;
-
-    left:-20px;
-
-    text-align:center;
-
-}
-
-.warranty-icon{
-
-    width:55px;
-
-    height:55px;
-
-    margin:0 auto 12px;
-
-    border-radius:50%;
-
-    background:linear-gradient(135deg,#10B981,#059669);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#fff;
-
-    font-size:24px;
-
-}
-
-.warranty-card h4{
-
-    font-size:18px;
-
-    color:#0F172A;
-
-    font-weight:700;
-
-}
-
-.warranty-card p{
-
-    margin-top:6px;
-
-    color:#475569;
-
-    font-size:13px;
-
-}
 
 /*==============================
 TABLET
@@ -1715,15 +1646,15 @@ TABLET
 
         max-width: 100%;
 
-        /* order: 2; */
+        order: 2;
 
     }
 
-    /* .hero-image {
+    .hero-image {
 
-        /* order: 1; */
+        order: 1;
 
-    /* } */ 
+    }
 
     .hero-content h1 {
 
@@ -1809,7 +1740,7 @@ MOBILE
 
     .hero {
 
-        padding-top: 90px;
+        padding-top: 110px;
 
         min-height: auto;
 
@@ -1817,7 +1748,7 @@ MOBILE
 
     .hero-wrapper {
 
-        gap: 25px;
+        gap: 45px;
 
     }
 
@@ -1865,99 +1796,63 @@ MOBILE
 
     .hero-stats {
 
-        gap: 15px;
-
-    }
-.hero-image{
-
-        /* order:1; */
-
-        position:relative;
-
-        display:flex;
-
-        justify-content:center;
-
-        align-items:center;
-
-        padding:10px 0 30px;
+        gap: 25px;
 
     }
 
-    .hero-image img{
+    .hero-image {
 
-        width:300px;
-        height:390px;
-        object-fit:cover;
-    }
-
-    .hero-shape{
-
-        width:340px;
-        height:340px;
-    }
-
-    /* Warranty Card */
-
-    .warranty-card{
-
-        top:5px;
-        left:8px;
-
-        width:150px;
-
-        padding:14px;
-
-        border-radius:18px;
+        padding: 20px;
 
     }
 
-    .warranty-card h4{
+    .hero-image img {
 
-        font-size:18px;
+        width: 290px;
 
-    }
-
-    .warranty-card p{
-
-        font-size:12px;
-
-        line-height:1.4;
+        height: 380px;
 
     }
 
-    .warranty-icon{
+    .hero-shape {
 
-        width:42px;
-        height:42px;
-        font-size:18px;
-        margin-bottom:8px;
+        width: 340px;
 
-    }
-
-    /* Experience Card */
-
-    .experience-card{
-
-        right:8px;
-        bottom:10px;
-
-        padding:14px 18px;
+        height: 340px;
 
     }
 
-    .experience-card h3{
+    .rating-card {
 
-        font-size:28px;
+        top: -10px;
 
-    }
+        left: 0;
 
-    .experience-card span{
-
-        font-size:12px;
+        transform: scale(.85);
 
     }
 
+    .experience-card {
+
+        right: 0;
+
+        bottom: 0;
+
+        transform: scale(.85);
+
+    }
+
+    .trust-card {
+
+        display: none;
+
+    }
+
+    .service-tag {
+
+        display: none;
+
+    }
 
 }
 
@@ -5440,6 +5335,7 @@ HOVER
     transform: translateY(0);
 
 }
+
 
 /*==================================================
             SEARCH ICON
@@ -10980,4 +10876,4 @@ RESPONSIVE
 
 }
 
-}
+} 

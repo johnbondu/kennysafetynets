@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const revealElements = document.querySelectorAll(".reveal");
 
-    const counters = document.querySelectorAll(".stat-box h2");
+    // const counters = document.querySelectorAll(".stat-box h2");
 
     const heroImage = document.querySelector(".hero-image");
 
