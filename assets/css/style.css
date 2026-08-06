@@ -10981,3 +10981,25 @@ RESPONSIVE
 }
 
 }
+.area-card{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:inherit;
+    transition:.3s ease;
+}
+
+.area-card:hover{
+    color:var(--primary-color);
+    transform:translateY(-5px);
+    text-decoration:none;
+}
+
+.area-card i{
+    transition:.3s ease;
+}
+
+.area-card:hover i{
+    transform:scale(1.15);
+}
