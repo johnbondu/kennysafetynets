@@ -62,7 +62,7 @@ button {
 :root {
 
     --primary: #0F172A;
-    --secondary: #FF6B00;
+  --secondary: #7A3E48;
     --blue: #2563EB;
     --green: #10B981;
 
@@ -478,7 +478,7 @@ SERVICES DROPDOWN
 
     transition: .3s;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -486,7 +486,7 @@ SERVICES DROPDOWN
 
     background: #FFF7F2;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     transform: translateX(5px);
 
@@ -526,7 +526,7 @@ SERVICES DROPDOWN
 
     border-radius: 12px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -585,14 +585,14 @@ LEFT PANEL
 
     background: #FFF7F2;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 
 }
 
 .category-item.active {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -614,7 +614,7 @@ LEFT PANEL
 
     background: #fff;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 20px;
 
@@ -733,13 +733,13 @@ CENTER PANEL
     background: #FFF7F2;
 
     transform: translateX(8px);
-    border-left: 4px solid #FF6B00;
+    border-left: 4px solid #7A3E48;
 
 }
 
 .service-group a:hover strong {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -821,7 +821,7 @@ RIGHT PREVIEW PANEL
 
     border-radius: 14px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -923,7 +923,7 @@ CUSTOM SCROLLBAR
 
 .mega-services::-webkit-scrollbar-thumb {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     border-radius: 20px;
 
@@ -1058,7 +1058,7 @@ BACKGROUND BLOBS
 
     height: 4px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     border-radius: 20px;
 
@@ -1076,7 +1076,7 @@ BACKGROUND BLOBS
 
     height: 420px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     opacity: .08;
 
@@ -1327,6 +1327,438 @@ STATS
 .hero-image:hover img {
 
     transform: scale(1.03);
+
+}
+/* =========================================================
+   HERO LIMITED OFFER
+========================================================= */
+
+.hero-offer {
+
+    width: min(100%, 540px);
+
+    margin-top: 24px;
+
+    padding: 13px 16px;
+
+    border: 1px solid
+        rgba(255,255,255,.18);
+
+    border-radius: 18px;
+
+    background:
+        rgba(10,25,42,.68);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.20);
+
+    color: #FFFFFF;
+
+    animation:
+        offerAppear .8s
+        .35s
+        both;
+}
+
+
+@keyframes offerAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   OFFER TOP
+========================================================= */
+
+.hero-offer-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 9px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.10);
+}
+
+
+.hero-offer-live {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.hero-offer-live > span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--secondary);
+
+    box-shadow:
+        0 0 0 5px
+        rgba(201,162,39,.15);
+
+    animation:
+        offerPulse 1.5s
+        infinite;
+}
+
+
+@keyframes offerPulse {
+
+    0%,100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .45;
+        transform: scale(.75);
+    }
+
+}
+
+
+.hero-offer-discount {
+
+    padding:
+        5px 9px;
+
+    border-radius:
+        999px;
+
+    background: var(--secondary);
+
+    color:
+        #FFFFFF;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing:
+        .5px;
+}
+
+
+/* =========================================================
+   OFFER CONTENT
+========================================================= */
+
+.hero-offer-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 12px;
+}
+
+
+.hero-offer-content > div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.hero-offer-content strong {
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        13px;
+
+    font-weight:
+        850;
+}
+
+
+.hero-offer-content span {
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.4;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.hero-countdown {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+
+.countdown-unit {
+
+    min-width: 39px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 4px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255,255,255,.07);
+}
+
+
+.countdown-unit strong {
+
+    color:
+        #FFFFFF;
+
+    font-family:
+        "Plus Jakarta Sans",
+        sans-serif;
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1;
+}
+
+
+.countdown-unit span {
+
+    margin-top: 4px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size:
+        6px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1px;
+}
+
+
+.hero-countdown > b {
+
+    color:
+        rgba(255,255,255,.5);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    animation:
+        countdownBlink 1s
+        infinite;
+}
+
+
+@keyframes countdownBlink {
+
+    0%,100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .25;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .hero-offer {
+
+        width: 100%;
+
+        margin-top: 18px;
+
+        padding: 12px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .hero-offer-top {
+
+        padding-bottom: 8px;
+
+    }
+
+
+    .hero-offer-live {
+
+        font-size: 8px;
+
+        letter-spacing:
+            1.2px;
+    }
+
+
+    .hero-offer-discount {
+
+        font-size: 9px;
+
+        padding:
+            5px 8px;
+    }
+
+
+    .hero-offer-content {
+
+        align-items: flex-end;
+
+        gap: 10px;
+
+    }
+
+
+    .hero-offer-content strong {
+
+        font-size: 11px;
+
+    }
+
+
+    .hero-offer-content
+    span {
+
+        font-size: 8px;
+
+    }
+
+
+    .hero-countdown {
+
+        gap: 3px;
+
+    }
+
+
+    .countdown-unit {
+
+        min-width: 34px;
+
+        padding:
+            5px 3px;
+
+        border-radius: 7px;
+
+    }
+
+
+    .countdown-unit strong {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .countdown-unit span {
+
+        font-size:
+            5px;
+
+    }
+
+
+    .hero-countdown > b {
+
+        font-size:
+            10px;
+
+    }
 
 }
 
@@ -1642,7 +2074,7 @@ TABLET
 
     .top-info i {
 
-        color: #FF6B00;
+        color: #7A3E48;
 
     }
 
@@ -2133,7 +2565,7 @@ PHONE RING ANIMATION
 
 .mail {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
 }
 
@@ -2412,7 +2844,7 @@ SCROLLBAR
 
 ::-webkit-scrollbar-thumb {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     border-radius: 20px;
 
@@ -2632,7 +3064,7 @@ SCROLLBAR
 
         border-radius: 12px;
 
-        background: #FF6B00;
+        background: #7A3E48;
 
         color: #fff;
 
@@ -2779,7 +3211,7 @@ SCROLLBAR
 
 .close-menu:hover {
 
-    background: #FF6B00;
+    background: #7A3E48;
     color: #fff;
 
 }
@@ -2808,7 +3240,7 @@ SCROLLBAR
 
     background: #FFF4EC;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     border-radius: 12px;
 
@@ -2844,7 +3276,7 @@ SCROLLBAR
 
     background: #FFF7F2;
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
     transform: translateX(5px);
 
@@ -2981,7 +3413,7 @@ body.menu-open #spBackToTop{
 
 .mobile-submenu a:hover {
 
-    border-left: 3px solid #FF6B00;
+    border-left: 3px solid #7A3E48;
 
     background: #FFF7F2;
 
@@ -3017,7 +3449,7 @@ body.menu-open #spBackToTop{
 
 .mobile-call {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -3107,7 +3539,7 @@ HOVER EFFECTS
 
     height: 2px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     transition: .35s;
 
@@ -3479,7 +3911,7 @@ EXTRA MOBILE FIXES
 
     background: rgba(255, 107, 0, .12);
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     border-radius: 50px;
 
@@ -3619,7 +4051,7 @@ SERVICE CARD
 
     height: 5px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     transition: .4s;
 
@@ -3814,7 +4246,7 @@ SERVICE CALL BUTTON
 
     margin-top: 20px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -3868,7 +4300,7 @@ CARD HOVER
 
 .service-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -4099,7 +4531,7 @@ MOBILE NAV
 
     background: #FFF3EB;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -4109,7 +4541,7 @@ MOBILE NAV
 
     font-size: 18px;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -4147,7 +4579,7 @@ MOBILE NAV
 
     height: 350px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     opacity: .05;
 
@@ -4207,7 +4639,7 @@ SECTION TITLE
 
     background: #FFF3EB;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-weight: 600;
 
@@ -4343,7 +4775,7 @@ SECTION TITLE
 
     font-size: 32px;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     background: linear-gradient(135deg, #FFF4EC, #FFE5D4);
 
@@ -4353,7 +4785,7 @@ SECTION TITLE
 
 .why-card:hover .why-icon {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #ffffff;
 
@@ -4407,7 +4839,7 @@ SECTION TITLE
 
 .why-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -4874,7 +5306,7 @@ ICON
 
     background: #FFF4EC;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 34px;
 
@@ -4884,7 +5316,7 @@ ICON
 
 .process-card:hover .process-icon {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -4932,7 +5364,7 @@ ARROWS
 
     font-size: 28px;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     animation: arrowMove 2s infinite;
 
@@ -4966,7 +5398,7 @@ HOVER
 
 .process-card:hover .process-number {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     opacity: .18;
 
@@ -4976,7 +5408,7 @@ HOVER
 
 .process-card:hover {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
 }
 
@@ -5511,7 +5943,7 @@ HOVER
 
 .gallery-card:hover::after {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
 }
 
@@ -5919,7 +6351,7 @@ REVIEW CARD
 
 .review-card:hover {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
 }
 
@@ -6087,7 +6519,7 @@ HOVER EFFECT
 
 .review-card:hover h4 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -6464,13 +6896,13 @@ FAQ CARD
 
 .faq-item:hover {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
 }
 
 .faq-question:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     transition: .3s;
 
@@ -6526,7 +6958,7 @@ PLUS ICON
 
     background: #FFF3EB;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     display: flex;
 
@@ -6570,7 +7002,7 @@ ACTIVE
 
 .faq-item.active {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
 }
 
@@ -6582,7 +7014,7 @@ ACTIVE
 
 .faq-item.active .faq-question i {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -6880,7 +7312,7 @@ LEFT SIDE
 
     transform: translateY(-6px);
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
     box-shadow: 0 25px 50px rgba(15, 23, 42, .12);
 
@@ -7024,7 +7456,7 @@ INPUTS
 
 .input-group textarea:focus {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
     background: #fff;
 
@@ -7044,7 +7476,7 @@ INPUTS
 
 .input-group select:hover {
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
 }
 
@@ -7367,7 +7799,7 @@ GOOGLE MAP
 
 .contact-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -7552,7 +7984,7 @@ HEADINGS
 
     height: 3px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     border-radius: 30px;
 
@@ -7590,7 +8022,7 @@ LIST
 
 .footer-column ul li a:hover {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     padding-left: 8px;
 
@@ -7612,7 +8044,7 @@ CONTACT
 
 .footer-contact i {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 18px;
 
@@ -7664,7 +8096,7 @@ SOCIAL
 
 .footer-social a:hover {
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     transform: translateY(-6px);
 
@@ -7733,7 +8165,7 @@ BACK TO TOP
 
     background: linear-gradient(135deg,#FF6B00,#FF914D);
 
-    color: #fff;
+    color: #8F6B45;
 
     display: flex;
 
@@ -8083,7 +8515,7 @@ CONTENT
 }
 
 .sp-breadcrumb span {
-    color: #FF6B00;
+    color: #7A3E48;
 }
 
 .sp-tag {
@@ -8091,7 +8523,7 @@ CONTENT
     align-items: center;
     gap: 10px;
     background: rgba(255, 107, 0, .15);
-    color: #FF6B00;
+    color: #7A3E48;
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 600;
@@ -8107,7 +8539,7 @@ CONTENT
 
 .sp-content h1 span {
     display: block;
-    color: #FF6B00;
+    color: #7A3E48;
 }
 
 .sp-content p {
@@ -8164,7 +8596,7 @@ BUTTONS
 }
 
 .sp-btn-primary {
-    background: #FF6B00;
+    background: #7A3E48;
     color: #fff;
 }
 
@@ -8247,7 +8679,7 @@ FLOATING CARD
 
     align-items: center;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 28px;
 
@@ -8313,7 +8745,7 @@ BOTTOM TRUST BAR
 
 .sp-trust-box h2 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 38px;
 
@@ -8888,7 +9320,7 @@ FLOATING EXPERIENCE CARD
 
     box-shadow: 0 25px 60px rgba(0, 0, 0, .15);
 
-    border-top: 5px solid #FF6B00;
+    border-top: 5px solid #7A3E48;
 
 }
 
@@ -8896,7 +9328,7 @@ FLOATING EXPERIENCE CARD
 
     font-size: 48px;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     margin-bottom: 10px;
 
@@ -8924,7 +9356,7 @@ CONTENT
 
     background: #FFF3EB;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     border-radius: 40px;
 
@@ -8950,7 +9382,7 @@ CONTENT
 
 .sp-about-content h2 span {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -9028,7 +9460,7 @@ STATS
 
 .sp-about-stats h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 34px;
 
@@ -9056,7 +9488,7 @@ BUTTON
 
     padding: 16px 34px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -9150,7 +9582,7 @@ FEATURE HOVER
 
 .sp-about-features div:hover {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -9496,7 +9928,7 @@ TITLE
 
     background: #FFF3EB;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     border-radius: 50px;
 
@@ -9526,7 +9958,7 @@ TITLE
 
     background: none;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     padding: 0;
 
@@ -9600,7 +10032,7 @@ CARD
 
     height: 5px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     transition: .4s;
 
@@ -9680,7 +10112,7 @@ TEXT
 
 .sp-benefit-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -9912,7 +10344,7 @@ CARD
 
     height: 5px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     transform: scaleX(0);
 
@@ -9990,7 +10422,7 @@ TEXT
 
 .sp-app-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -10116,7 +10548,7 @@ APPLICATION BUTTON
 
     padding: 15px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -10268,7 +10700,7 @@ CARD
 
     height: 5px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     transition: .4s;
 
@@ -10366,7 +10798,7 @@ TEXT
 
 .sp-process-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -10648,7 +11080,7 @@ LOCATION
 
     background: #FFF3EB;
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     padding: 8px 18px;
 
@@ -10686,7 +11118,7 @@ TEXT
 
 .sp-project-card:hover h3 {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
 }
 
@@ -10736,7 +11168,7 @@ BUTTON
 
     padding: 15px;
 
-    background: #FF6B00;
+    background: #7A3E48;
 
     color: #fff;
 
@@ -10880,7 +11312,7 @@ RESPONSIVE
 
 .area-card i {
 
-    color: #FF6B00;
+    color: #7A3E48;
 
     font-size: 18px;
 
@@ -10890,7 +11322,7 @@ RESPONSIVE
 
     transform: translateY(-5px);
 
-    border-color: #FF6B00;
+    border-color: #7A3E48;
 
     box-shadow: 0 18px 40px rgba(255, 107, 0, .15);
 

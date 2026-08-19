@@ -545,6 +545,193 @@ document.addEventListener("DOMContentLoaded", () => {
         galleryObserver.observe(card);
 
     });
+
+    /* =========================================================
+   HERO OFFER COUNTDOWN
+   ONE 60-MINUTE TIMER FOR ALL 5 HERO SLIDES
+========================================================= */
+
+const heroHours =
+    document.querySelectorAll(".hero-hours");
+
+const heroMinutes =
+    document.querySelectorAll(".hero-minutes");
+
+const heroSeconds =
+    document.querySelectorAll(".hero-seconds");
+
+
+/* ---------------------------------------------------------
+   SETTINGS
+--------------------------------------------------------- */
+
+const OFFER_DURATION =
+    60 * 60 * 1000;
+
+const OFFER_STORAGE_KEY =
+    "maheshSafetyOfferDeadline";
+
+
+/* ---------------------------------------------------------
+   GET SAVED DEADLINE
+--------------------------------------------------------- */
+
+function getOfferDeadline() {
+
+    let storedDeadline =
+        localStorage.getItem(
+            OFFER_STORAGE_KEY
+        );
+
+    let deadline =
+        Number(storedDeadline);
+
+
+    /*
+       If there is no valid saved deadline,
+       create a new 60-minute countdown.
+    */
+
+    if (
+        !storedDeadline ||
+        !Number.isFinite(deadline)
+    ) {
+
+        deadline =
+            Date.now() +
+            OFFER_DURATION;
+
+        localStorage.setItem(
+            OFFER_STORAGE_KEY,
+            String(deadline)
+        );
+
+    }
+
+
+    return deadline;
+
+}
+
+
+let offerDeadline =
+    getOfferDeadline();
+
+
+/* ---------------------------------------------------------
+   UPDATE ALL 5 COUNTDOWNS
+--------------------------------------------------------- */
+
+function updateHeroOfferCountdown() {
+
+    let remaining =
+        offerDeadline -
+        Date.now();
+
+
+    /* ---------------------------------------------
+       WHEN TIMER REACHES ZERO
+
+       Restart another 60-minute cycle.
+    --------------------------------------------- */
+
+    if (remaining <= 0) {
+
+        offerDeadline =
+            Date.now() +
+            OFFER_DURATION;
+
+        localStorage.setItem(
+            OFFER_STORAGE_KEY,
+            String(offerDeadline)
+        );
+
+        remaining =
+            offerDeadline -
+            Date.now();
+
+    }
+
+
+    const totalSeconds =
+        Math.floor(
+            remaining / 1000
+        );
+
+
+    const hours =
+        Math.floor(
+            totalSeconds / 3600
+        );
+
+
+    const minutes =
+        Math.floor(
+            (totalSeconds % 3600) / 60
+        );
+
+
+    const seconds =
+        totalSeconds % 60;
+
+
+    const formattedHours =
+        String(hours).padStart(2, "0");
+
+
+    const formattedMinutes =
+        String(minutes).padStart(2, "0");
+
+
+    const formattedSeconds =
+        String(seconds).padStart(2, "0");
+
+
+    /* ---------------------------------------------
+       UPDATE EVERY HERO SLIDE
+    --------------------------------------------- */
+
+    heroHours.forEach((element) => {
+
+        element.textContent =
+            formattedHours;
+
+    });
+
+
+    heroMinutes.forEach((element) => {
+
+        element.textContent =
+            formattedMinutes;
+
+    });
+
+
+    heroSeconds.forEach((element) => {
+
+        element.textContent =
+            formattedSeconds;
+
+    });
+
+}
+
+
+/* ---------------------------------------------------------
+   RUN IMMEDIATELY
+--------------------------------------------------------- */
+
+updateHeroOfferCountdown();
+
+
+/* ---------------------------------------------------------
+   UPDATE EVERY SECOND
+--------------------------------------------------------- */
+
+setInterval(
+    updateHeroOfferCountdown,
+    1000
+);
     /*==========================================
          LIGHTBOX
  ==========================================*/
