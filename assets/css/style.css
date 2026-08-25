@@ -62,7 +62,7 @@ button {
 :root {
 
     --primary: #0F172A;
-  --secondary: #7A3E48;
+ --secondary: #115E59;
     --blue: #2563EB;
     --green: #10B981;
 
@@ -478,7 +478,7 @@ SERVICES DROPDOWN
 
     transition: .3s;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -486,7 +486,7 @@ SERVICES DROPDOWN
 
     background: #FFF7F2;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     transform: translateX(5px);
 
@@ -585,7 +585,7 @@ LEFT PANEL
 
     background: #FFF7F2;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 
 }
@@ -614,7 +614,7 @@ LEFT PANEL
 
     background: #fff;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 20px;
 
@@ -739,7 +739,7 @@ CENTER PANEL
 
 .service-group a:hover strong {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -2074,7 +2074,7 @@ TABLET
 
     .top-info i {
 
-        color: #7A3E48;
+        color: #3AAFA9;
 
     }
 
@@ -3240,7 +3240,7 @@ SCROLLBAR
 
     background: #FFF4EC;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     border-radius: 12px;
 
@@ -3276,7 +3276,7 @@ SCROLLBAR
 
     background: #FFF7F2;
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
     transform: translateX(5px);
 
@@ -3911,7 +3911,7 @@ EXTRA MOBILE FIXES
 
     background: rgba(255, 107, 0, .12);
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     border-radius: 50px;
 
@@ -4300,7 +4300,7 @@ CARD HOVER
 
 .service-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -4531,7 +4531,7 @@ MOBILE NAV
 
     background: #FFF3EB;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -4541,7 +4541,7 @@ MOBILE NAV
 
     font-size: 18px;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -4639,7 +4639,7 @@ SECTION TITLE
 
     background: #FFF3EB;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-weight: 600;
 
@@ -4775,7 +4775,7 @@ SECTION TITLE
 
     font-size: 32px;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     background: linear-gradient(135deg, #FFF4EC, #FFE5D4);
 
@@ -4839,7 +4839,7 @@ SECTION TITLE
 
 .why-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -5306,7 +5306,7 @@ ICON
 
     background: #FFF4EC;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 34px;
 
@@ -5364,7 +5364,7 @@ ARROWS
 
     font-size: 28px;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     animation: arrowMove 2s infinite;
 
@@ -5398,7 +5398,7 @@ HOVER
 
 .process-card:hover .process-number {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     opacity: .18;
 
@@ -5408,7 +5408,7 @@ HOVER
 
 .process-card:hover {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
 }
 
@@ -5943,7 +5943,7 @@ HOVER
 
 .gallery-card:hover::after {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
 }
 
@@ -6351,7 +6351,7 @@ REVIEW CARD
 
 .review-card:hover {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
 }
 
@@ -6519,7 +6519,7 @@ HOVER EFFECT
 
 .review-card:hover h4 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -6896,13 +6896,13 @@ FAQ CARD
 
 .faq-item:hover {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
 }
 
 .faq-question:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     transition: .3s;
 
@@ -6958,7 +6958,7 @@ PLUS ICON
 
     background: #FFF3EB;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     display: flex;
 
@@ -7002,7 +7002,7 @@ ACTIVE
 
 .faq-item.active {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
 }
 
@@ -7312,7 +7312,7 @@ LEFT SIDE
 
     transform: translateY(-6px);
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
     box-shadow: 0 25px 50px rgba(15, 23, 42, .12);
 
@@ -7456,7 +7456,7 @@ INPUTS
 
 .input-group textarea:focus {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
     background: #fff;
 
@@ -7476,7 +7476,7 @@ INPUTS
 
 .input-group select:hover {
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
 }
 
@@ -7799,7 +7799,7 @@ GOOGLE MAP
 
 .contact-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -8022,7 +8022,7 @@ LIST
 
 .footer-column ul li a:hover {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     padding-left: 8px;
 
@@ -8044,7 +8044,7 @@ CONTACT
 
 .footer-contact i {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 18px;
 
@@ -8515,7 +8515,7 @@ CONTENT
 }
 
 .sp-breadcrumb span {
-    color: #7A3E48;
+    color: #3AAFA9;
 }
 
 .sp-tag {
@@ -8523,7 +8523,7 @@ CONTENT
     align-items: center;
     gap: 10px;
     background: rgba(255, 107, 0, .15);
-    color: #7A3E48;
+    color: #3AAFA9;
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 600;
@@ -8539,7 +8539,7 @@ CONTENT
 
 .sp-content h1 span {
     display: block;
-    color: #7A3E48;
+    color: #3AAFA9;
 }
 
 .sp-content p {
@@ -8679,7 +8679,7 @@ FLOATING CARD
 
     align-items: center;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 28px;
 
@@ -8745,7 +8745,7 @@ BOTTOM TRUST BAR
 
 .sp-trust-box h2 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 38px;
 
@@ -9328,7 +9328,7 @@ FLOATING EXPERIENCE CARD
 
     font-size: 48px;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     margin-bottom: 10px;
 
@@ -9356,7 +9356,7 @@ CONTENT
 
     background: #FFF3EB;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     border-radius: 40px;
 
@@ -9382,7 +9382,7 @@ CONTENT
 
 .sp-about-content h2 span {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -9460,7 +9460,7 @@ STATS
 
 .sp-about-stats h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 34px;
 
@@ -9582,7 +9582,7 @@ FEATURE HOVER
 
 .sp-about-features div:hover {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -9928,7 +9928,7 @@ TITLE
 
     background: #FFF3EB;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     border-radius: 50px;
 
@@ -9958,7 +9958,7 @@ TITLE
 
     background: none;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     padding: 0;
 
@@ -10112,7 +10112,7 @@ TEXT
 
 .sp-benefit-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -10422,7 +10422,7 @@ TEXT
 
 .sp-app-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -10798,7 +10798,7 @@ TEXT
 
 .sp-process-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -11080,7 +11080,7 @@ LOCATION
 
     background: #FFF3EB;
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     padding: 8px 18px;
 
@@ -11118,7 +11118,7 @@ TEXT
 
 .sp-project-card:hover h3 {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
 }
 
@@ -11312,7 +11312,7 @@ RESPONSIVE
 
 .area-card i {
 
-    color: #7A3E48;
+    color: #3AAFA9;
 
     font-size: 18px;
 
@@ -11322,7 +11322,7 @@ RESPONSIVE
 
     transform: translateY(-5px);
 
-    border-color: #7A3E48;
+    border-color: #3AAFA9;
 
     box-shadow: 0 18px 40px rgba(255, 107, 0, .15);
 
@@ -11434,4 +11434,179 @@ RESPONSIVE
 
 .area-card:hover i{
     transform:scale(1.15);
+}
+
+/* =========================================================
+   KENNY SAFETY NETS — KEYWORD LANDING PAGE SEO
+   Separate stylesheet. Existing site CSS is untouched.
+========================================================= */
+
+.keyword-seo-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 82px 20px;
+    background: #f7f9fc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.keyword-seo-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+}
+
+.keyword-seo-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2563eb;
+}
+
+.keyword-seo-section h2 {
+    margin: 0 0 18px;
+    color: #0f172a;
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.12;
+    font-weight: 800;
+}
+
+.keyword-seo-lead {
+    max-width: 850px;
+    margin: 0 0 34px;
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.keyword-seo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 34px;
+}
+
+.keyword-seo-card {
+    padding: 26px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(15,23,42,.05);
+}
+
+.keyword-seo-card h3,
+.keyword-seo-columns h3,
+.keyword-seo-faq h3 {
+    margin: 0 0 10px;
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.keyword-seo-card p,
+.keyword-seo-columns li,
+.keyword-seo-faq p,
+.keyword-seo-local p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.keyword-seo-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 30px;
+    margin-bottom: 24px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+}
+
+.keyword-seo-columns ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.keyword-seo-local {
+    padding: 26px 30px;
+    margin-bottom: 24px;
+    background: #0f172a;
+    border-radius: 18px;
+}
+
+.keyword-seo-local strong {
+    color: #fff;
+    font-size: 18px;
+}
+
+.keyword-seo-local p {
+    margin: 10px 0 0;
+    color: rgba(255,255,255,.72);
+}
+
+.keyword-seo-faq {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+}
+
+.keyword-seo-faq details {
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.keyword-seo-faq details:last-child {
+    border-bottom: 0;
+}
+
+.keyword-seo-faq summary {
+    cursor: pointer;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.keyword-seo-faq p {
+    margin: 10px 0 0;
+}
+
+.keyword-seo-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.keyword-seo-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #0f172a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.keyword-seo-links a:hover {
+    opacity: .9;
+}
+
+@media (max-width: 800px) {
+    .keyword-seo-section {
+        padding: 60px 16px;
+    }
+
+    .keyword-seo-grid,
+    .keyword-seo-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .keyword-seo-columns,
+    .keyword-seo-faq {
+        padding: 22px;
+    }
 }
