@@ -144,7 +144,7 @@ Kenny-Safety-Nets/
 
 **Kenny Safety Nets**
 
-📱 Phone: +91 9032544223
+📱 Phone: +91 6363458365
 
 🌐 Website: https://www.kennysafetynets.in/
 
