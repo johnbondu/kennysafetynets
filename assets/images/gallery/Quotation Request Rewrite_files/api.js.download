@@ -4,7 +4,15 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T5CJ3TBW');</script>
-<!-- End Google Tag Manager -->".concat(H,"</head><!-- Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager -->".concat(H,"<!-- Event snippet for Outbound click conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18313891981/uNypCO2D9pEdEI2h35xE',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+</script>
+</head><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5CJ3TBW"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --></body></html>"),o.set(u,{callback:i,iframe:s,timeout:h})}};function m(){var l,n,a=U();a===void 0&&console.error("[Cloudflare Javascript Detections] Could not find Javascript Detections API script tag, some features may not be available.");var i=(l=a==null?void 0:a.src)!==null&&l!==void 0?l:"",f=new URLSearchParams((n=i.split("?")[1])!==null&&n!==void 0?n:"");return{loadedAsync:(a==null?void 0:a.async)===!0||(a==null?void 0:a.defer)===!0,params:f,src:i}}var g=m(),_=g.params.get("onload");_!==null&&_!==""&&setTimeout(function(){var l=Reflect.get(window,_);typeof l=="function"?Reflect.apply(l,window,[]):(console.warn("[Cloudflare Javascript Detections] Unable to find onload callback '".concat(_,"' immediately after loading.")),setTimeout(function(){var n=Reflect.get(window,_);typeof n=="function"?Reflect.apply(n,window,[]):console.warn("[Cloudflare Javascript Detections] Unable to find onload callback '".concat(_,"' after 1 second."))},1e3))},0)})();})();
